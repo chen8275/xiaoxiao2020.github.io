@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="springboot,rabbitmq,">
+  <meta name="keywords" content="Java8,">
 
 
 
@@ -81,18 +81,20 @@
 
 
 
-<meta name="description" content="今日内容是消息队列。大佬讲了三个消息队列分别是 Pegion、Kafka 和 RabbitMQ。其中 Pegion 是公司自己研发的组件。今天主要在 SpringBoot 中集成 RabbitMQ , 将消息储存在消息队列中并消费的过程。">
-<meta name="keywords" content="springboot,rabbitmq">
+<meta name="description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     我们来看一个简单的实例：">
+<meta name="keywords" content="Java8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot 中使用 RabbitMQ">
-<meta property="og:url" content="http://huuzii.wiki/2018/07/20/SpringBoot中使用RabbitMQ/index.html">
+<meta property="og:title" content="Java8 中的 Optional 类的基本使用">
+<meta property="og:url" content="http://huuzii.wiki/2018/10/10/Java8 中的 Optional 类的基本使用/index.html">
 <meta property="og:site_name" content="Joyu_chen">
-<meta property="og:description" content="今日内容是消息队列。大佬讲了三个消息队列分别是 Pegion、Kafka 和 RabbitMQ。其中 Pegion 是公司自己研发的组件。今天主要在 SpringBoot 中集成 RabbitMQ , 将消息储存在消息队列中并消费的过程。">
+<meta property="og:description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     我们来看一个简单的实例：">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-11T10:56:10.076Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g6wx101itej30vu0bl3yl.jpg">
+<meta property="og:updated_time" content="2019-09-12T10:37:32.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot 中使用 RabbitMQ">
-<meta name="twitter:description" content="今日内容是消息队列。大佬讲了三个消息队列分别是 Pegion、Kafka 和 RabbitMQ。其中 Pegion 是公司自己研发的组件。今天主要在 SpringBoot 中集成 RabbitMQ , 将消息储存在消息队列中并消费的过程。">
+<meta name="twitter:title" content="Java8 中的 Optional 类的基本使用">
+<meta name="twitter:description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     我们来看一个简单的实例：">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g6wx101itej30vu0bl3yl.jpg">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://huuzii.wiki/2018/07/20/SpringBoot中使用RabbitMQ/">
+  <link rel="canonical" href="http://huuzii.wiki/2018/10/10/Java8 中的 Optional 类的基本使用/">
 
 
 
 
 
-  <title>SpringBoot 中使用 RabbitMQ | Joyu_chen</title>
+  <title>Java8 中的 Optional 类的基本使用 | Joyu_chen</title>
   
 
 
@@ -267,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://huuzii.wiki/2018/07/20/SpringBoot中使用RabbitMQ/">
+    <link itemprop="mainEntityOfPage" href="http://huuzii.wiki/2018/10/10/Java8 中的 Optional 类的基本使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiaoxiao2020">
@@ -284,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringBoot 中使用 RabbitMQ</h1>
+          <h1 class="post-title" itemprop="name headline">Java8 中的 Optional 类的基本使用</h1>
         
 
         <div class="post-meta">
@@ -296,8 +298,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-20T11:23:26+08:00">
-                2018-07-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-10T10:10:10+08:00">
+                2018-10-10
               </time>
             
 
@@ -319,8 +321,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/springboot/" itemprop="url" rel="index">
-                    <span itemprop="name">springboot</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -356,81 +358,76 @@
       
 
       
-        <p>今日内容是消息队列。大佬讲了三个消息队列分别是 Pegion、Kafka 和 RabbitMQ。其中 Pegion 是公司自己研发的组件。今天主要在 SpringBoot 中集成 RabbitMQ , 将消息储存在消息队列中并消费的过程。</p>
+        <p>Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。    </p>
+<p>我们来看一个简单的实例：</p>
 <a id="more"></a>
-<h2 id="Message-Broker-与-AMQP-简介"><a href="#Message-Broker-与-AMQP-简介" class="headerlink" title="Message Broker 与 AMQP 简介"></a>Message Broker 与 AMQP 简介</h2><p>Message Broker 是一种消息验证、传输、路由的架构模式，其设计目标主要应用于下面这些场景： </p>
-<ul>
-<li>消息路由到一个或多个目的地</li>
-<li>消息转化为其他的表现方式</li>
-<li>执行消息的聚集、消息的分解，并将结果发送到他们的目的地，然后重新组合相应返回给消息用户</li>
-<li>调用Web服务来检索数据</li>
-<li>响应事件或错误</li>
-<li>使用发布-订阅模式来提供内容或基于主题的消息路由</li>
-</ul>
-<p>AMQP 是 Advanced Message Queuing Protocol 的简称，它是一个面向消息中间件的开放式标准应用层协议。AMQP 定义了这些特性： </p>
-<ul>
-<li>消息方向</li>
-<li>消息队列</li>
-<li>消息路由（包括：点到点和发布-订阅模式）</li>
-<li>可靠性</li>
-<li>安全性</li>
-</ul>
-<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>本文要介绍的 RabbitMQ 就是以 AMQP 协议实现的一种中间件产品，它可以支持多种操作系统，多种编程语言，几乎可以覆盖所有主流的企业级技术平台。 </p>
-<h2 id="SpringBoot整合"><a href="#SpringBoot整合" class="headerlink" title="SpringBoot整合"></a>SpringBoot整合</h2><p>下面，我们通过在 SpringBoot 应用中整合 RabbitMQ，并实现一个简单的发送、接收消息的例子来对 RabbitMQ 有一个直观的感受和理解。</p>
-<p>在 SpringBoot 中整合 RabbitMQ 是一件非常容易的事，因为之前我们已经介绍过 Starter POMs，其中的 AMQP 模块就可以很好的支持 RabbitMQ，下面我们就来详细说说整合过程：</p>
-<ul>
-<li>新建一个 SpringBoot 工程，命名为：“rabbitmq-hello”。</li>
-<li>在<code>pom.xml</code>中引入如下依赖内容，其中<code>spring-boot-starter-amqp</code>用于支持 RabbitMQ。</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.3.7.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;</span><br><span class="line">&lt;/parent&gt;</span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>在<code>application.properties</code>中配置关于RabbitMQ的连接和用户信息，用户可以回到上面的安装内容，在管理页面中创建用户。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring.application.name=rabbitmq-hello</span><br><span class="line"></span><br><span class="line">spring.rabbitmq.host=localhost</span><br><span class="line">spring.rabbitmq.port=<span class="number">5672</span></span><br><span class="line">spring.rabbitmq.username=spring</span><br><span class="line">spring.rabbitmq.password=<span class="number">123456</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String address = world.getCountry.getCity.getName;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>创建消息生产者<code>Sender</code>。通过注入<code>AmqpTemplate</code>接口的实例来实现消息的发送，<code>AmqpTemplate</code>接口定义了一套针对AMQP协议的基础操作。在 SpringBoot 中会根据配置来注入其具体实现。在该生产者，我们会产生一个字符串，并发送到名为<code>hello</code>的队列中。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sender</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> AmqpTemplate rabbitTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String context = <span class="string">"hello "</span> + <span class="keyword">new</span> Date();</span><br><span class="line">        System.out.println(<span class="string">"Sender : "</span> + context);</span><br><span class="line">        <span class="keyword">this</span>.rabbitTemplate.convertAndSend(<span class="string">"hello"</span>, context);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在得到地址之前，需要对各个类进行检查防止出现空指针异常：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getAddress</span><span class="params">(World world)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (world != <span class="keyword">null</span>)&#123;</span><br><span class="line">            Country country = world.getCountry();</span><br><span class="line">            <span class="keyword">if</span> (country!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                City city = country.getCity();</span><br><span class="line">                <span class="keyword">if</span> (city != <span class="keyword">null</span>)&#123;</span><br><span class="line">                    <span class="keyword">return</span> city.getName();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"unknown"</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>创建消息消费者<code>Receiver</code>。通过<code>@RabbitListener</code>注解定义该类对<code>hello</code>队列的监听，并用<code>@RabbitHandler</code>注解来指定对消息的处理方法。所以，该消费者实现了对<code>hello</code>队列的消费，消费操作为输出消息的字符串内容。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@RabbitListener</span>(queues = <span class="string">"hello"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Receiver</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RabbitHandler</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">process</span><span class="params">(String hello)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Receiver : "</span> + hello);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到上面的检查有多么繁杂，代码中充斥着空检查，可读性糟糕透顶。</p>
+<h2 id="Optional-类入门"><a href="#Optional-类入门" class="headerlink" title="Optional 类入门"></a>Optional 类入门</h2><p>变量存在时， Optional 类只是对类简单封装。变量不存在时，缺失的值会被建模成一个“空” 的 Optional 对象，由方法 Optional.empty() 返回。  那你可能就会疑惑，null 和  Optional.empty() 的区别在哪呢？从语义上，你可以把它们当作一回事儿，但是实际中它们之间的差别非常 大 ： 如果你尝试解引用一个 null ， 一定会触发NullPointerException ， 不过使用 Optional.empty() 就完全没事儿，它是 Optional 类的一个有效对象，多种场景都能调用，非常有用。     </p>
+<h3 id><a href="#" class="headerlink" title=" "></a> </h3><h2 id="应用-Optional-的几种模式"><a href="#应用-Optional-的几种模式" class="headerlink" title="应用 Optional 的几种模式"></a>应用 Optional 的几种模式</h2><h3 id="创建-Optional-对象实例"><a href="#创建-Optional-对象实例" class="headerlink" title="创建 Optional 对象实例"></a>创建 Optional 对象实例</h3><p>可以创建一个空的 Optional 对象实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = NoSuchElementException.class)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createOptionalObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Optional&lt;String&gt; country = Optional.empty();</span><br><span class="line">        country.get();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>创建RabbitMQ的配置类<code>RabbitConfig</code>，用来配置队列、交换器、路由等高级信息。这里我们以入门为主，先以最小化的配置来定义，以完成一个基本的生产和消费过程。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RabbitConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Queue <span class="title">helloQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Queue(<span class="string">"hello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>毫无疑问，当我们调用 get() 方法会报 NoSuchElementException 异常</p>
+<p>还可以使用 of() 和 ofNullable() 方法创建包含值的 Optioanal 实例，区别在于如果将 null 当作参数传进去 of() 会报空指针异常，所以对象可能存在或者不存在，应该使用 ofNullable()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createOptionalObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Optional&lt;String&gt; country = Optional.of(<span class="string">"中国"</span>);</span><br><span class="line">        Optional&lt;String&gt; city = Optional.ofNullable(<span class="string">"上海"</span>);</span><br><span class="line">        Optional&lt;String&gt; world = Optional.ofNullable(<span class="keyword">null</span>);</span><br><span class="line">        <span class="comment">//下面会报空指针异常</span></span><br><span class="line">        Optional&lt;String&gt; province = Optional.of(<span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>创建应用主类：</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(HelloApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如何获取Optional变量中的值 ？Optional 提供了一个 get() 方法。不过 get方法在遭遇到空的Optional对象时也会抛出异常，所以不按照约定的方式使用它，又会让我们再度陷入由null引起的代码维护的梦魇。</p>
+<h3 id="访问-Optional-对象的值"><a href="#访问-Optional-对象的值" class="headerlink" title="访问 Optional 对象的值"></a>访问 Optional 对象的值</h3><p>从 <em>Optional</em> 实例中取回实际值对象的方法之一是使用 <em>get()</em> 方法： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getOptionalObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        String country = <span class="string">"China"</span></span><br><span class="line">        Optional&lt;String&gt; countryName = Optional.ofNullable(country);</span><br><span class="line">        </span><br><span class="line">        Assert.assertEquals(<span class="string">"China"</span>,countryName.get());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>创建单元测试类，用来调用消息生产：</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner.class)</span><br><span class="line"><span class="meta">@SpringApplicationConfiguration</span>(classes = HelloApplication.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloApplicationTests</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> Sender sender;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        sender.send();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然这个方法会在值为null时抛出异常，要避免异常，首先要进行检查</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getOptionalObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">       City city = <span class="keyword">new</span> City(<span class="string">"ShangHai"</span>);</span><br><span class="line">       Optional&lt;City&gt; sample = Optional.ofNullable(city);</span><br><span class="line">       Assert.assertTrue(sample.isPresent());</span><br><span class="line"></span><br><span class="line">       Assert.assertEquals(city.getName(),sample.get().getName());</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
-<p>完成程序编写之后，下面开始尝试运行。首先确保 RabbitMQ Server 已经开始，然后进行下面的操作：</p>
-<ul>
-<li>启动应用主类，从控制台中，我们看到如下内容，程序创建了一个访问<code>127.0.0.1:5672</code>中<code>springcloud</code>的连接。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o.s.a.r.c.CachingConnectionFactory       : Created new connection: SimpleConnection@29836d32 [delegate=amqp://springcloud@127.0.0.1:5672/]</span><br></pre></td></tr></table></figure>
+<p>检查是否有值还有另外一个方法 ifPresent()，该方法除了检查还会传入一个 Consumer(消费者) 参数，如果对象不是空的，就会执行传入的 Lambda 表达式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getOptionalObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        City city = <span class="keyword">new</span> City(<span class="string">"ShangHai"</span>);</span><br><span class="line">        Optional&lt;City&gt; sample = Optional.ofNullable(city);</span><br><span class="line">        sample.ifPresent(c -&gt; Assert.assertEquals(city.getName(),sample.get().getName()));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>同时，我们通过 RabbitMQ 的控制面板，可以看到 Connection 和 Channels 中包含当前连接的条目。</p>
-<ul>
-<li><p>运行单元测试类，我们可以看到控制台中输出下面的内容，消息被发送到了 RabbitMQ Server 的<code>hello</code>队列中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sender : hello Sun Sep 25 11:06:11 CST 2016</span><br></pre></td></tr></table></figure>
+<p>如果对象不为空则为执行断言</p>
+<h3 id="返回默认值"><a href="#返回默认值" class="headerlink" title="返回默认值"></a>返回默认值</h3><p>Optional 提供了 API 用以返回对象值，或者在对象为空的时候返回默认值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getOptionalObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        City city = <span class="keyword">null</span>;</span><br><span class="line">        City city1 = <span class="keyword">new</span> City(<span class="string">"ShangHai"</span>);</span><br><span class="line">        City sample = Optional.ofNullable(city).orElse(city1);</span><br><span class="line">        Assert.assertEquals(city1.getName(),sample.getName());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二个同类型的 API 是 <em>orElseGet()</em> —— 其行为略有不同。这个方法会在有值的时候返回值，如果没有值，它会执行作为参数传入的 <em>Supplier(供应者)</em> 函数式接口，并将返回其执行结果： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">City sample = Optional.ofNullable(city).orElseGet(() -&gt; city1);</span><br></pre></td></tr></table></figure>
+
+<h3 id="返回异常"><a href="#返回异常" class="headerlink" title="返回异常"></a>返回异常</h3><p>Optional 还定义了 orElseThrow() API 它会在对象为空时抛出异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = IllegalArgumentException.class)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">throwOptionalException</span><span class="params">()</span></span>&#123;</span><br><span class="line">        City city = <span class="keyword">null</span>;</span><br><span class="line">        City sample = Optional.ofNullable(city).orElseThrow(() -&gt; <span class="keyword">new</span> IllegalArgumentException());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>city 为空所以会抛出 <em>IllegalArgumentException</em></p>
+<p>这个方法让我们有更丰富的语义，可以决定抛出什么样的异常，而不总是抛出 <em>NullPointerException</em>。 </p>
+<h2 id="使用-Optional-的实战实例"><a href="#使用-Optional-的实战实例" class="headerlink" title="使用 Optional 的实战实例"></a>使用 Optional 的实战实例</h2><h3 id="使用map从-Optional-对象中提取和转换值"><a href="#使用map从-Optional-对象中提取和转换值" class="headerlink" title="使用map从 Optional 对象中提取和转换值"></a>使用map从 Optional 对象中提取和转换值</h3><p>从对象中提取信息是一种比较常见的模式，为了支持这种模式，Optional提供了一个map方法。它的工作方式如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">    public void getCityName()&#123;</span><br><span class="line">        City city = new City(&quot;ShangHai&quot;);</span><br><span class="line">        Optional&lt;City&gt; sample = Optional.ofNullable(city);</span><br><span class="line">        Optional&lt;String&gt; name = sample.map(City::getName);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>map 对值应用(调用)作为参数的函数，然后将返回的值包装在 Optional 中，这就使对返回值进行链试调用的操作成为可能，那是不是就可以对之前的代码进行重构呢？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Optional&lt;String&gt; <span class="title">getCityName</span><span class="params">(World world)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        Optional&lt;World&gt; real = Optional.ofNullable(world);</span><br><span class="line">        Optional&lt;String&gt; name =</span><br><span class="line">                real.map(World::getCountry)</span><br><span class="line">                    .map(Country::getCity)</span><br><span class="line">                    .map(City::getName);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是这段代码无法通过编译，real.map(World::getCountry) 返回的是 <code>Optional&lt;Country&gt;</code> 的实例这个没有问题，但是后面继续调用map产生的就是 ``Optional&lt;Optional<country>&gt;`类型的对象。说明你遭遇了嵌套式的 Optional 机构。</country></p>
+<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g6wx101itej30vu0bl3yl.jpg" alt="optional"></p>
+<p>两层Optional对象结构</p>
+<h3 id="使用-flatMap-链接-Optional-对象"><a href="#使用-flatMap-链接-Optional-对象" class="headerlink" title="使用 flatMap 链接 Optional 对象"></a>使用 flatMap 链接 Optional 对象</h3><p>所以，我们该如何解决这个问题呢？让我们再回顾一下你刚刚在流上使用过的模式： flatMap 方法。使用流时， flatMap 方法接受一个函数作为参数，这个函数的返回值是另一个流。 这个方法会应用到流中的每一个元素，最终形成一个新的流的流。但是 flagMap 会用流的内容替 换每个新生成的流。换句话说，由方法生成的各个流会被合并或者扁平化为一个单一的流。这里 你希望的结果其实也是类似的，但是你想要的是将两层的 optional 合并为一个。    </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Optional&lt;String&gt; <span class="title">getCityName</span><span class="params">(World world)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        Optional&lt;World&gt; real = Optional.ofNullable(world);</span><br><span class="line">        Optional&lt;String&gt; name =</span><br><span class="line">                real.flagMap(World::getCountry)</span><br><span class="line">                    .flagMap(Country::getCity)</span><br><span class="line">                    .map(City::getName);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-filter-剔除特定的值"><a href="#使用-filter-剔除特定的值" class="headerlink" title="使用 filter 剔除特定的值"></a>使用 filter 剔除特定的值</h3><p>你经常需要调用某个对象的方法，那么你首先要检查对象是否为NULL</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">filterCity</span><span class="params">(City city)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    Optional&lt;City&gt; real = Optional.ofNullable(city);</span><br><span class="line">    real.filter(c -&gt; c!=<span class="keyword">null</span> &amp;&amp; <span class="string">"ShangHai"</span></span><br><span class="line">            .equals(c.getName()))</span><br><span class="line">            .ifPresent(x -&gt; System.out.println(<span class="string">"ok"</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ol>
+<li><p>null 引用在历史上被引入到程序设计语言中，目的是为了表示变量值的缺失。    </p>
 </li>
-<li><p>切换到应用主类的控制台，我们可以看到类似如下输出，消费者对<code>hello</code>队列的监听程序执行了，并输出了接受到的消息信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Receiver : hello Sun Sep 25 11:06:11 CST 2016</span><br></pre></td></tr></table></figure>
-
+<li><p>Java 8中引入了一个新的类 java.util.Optional<t>，对存在或缺失的变量值进行 建模。    </t></p>
 </li>
-</ul>
-<p>大功告成！</p>
+<li><p>你可以使用静态工厂方法 Optional.empty、 Optional.of 以及 Optional.ofNullable 创建 Optional 对象。    </p>
+</li>
+<li><p>Optional类支持多种方法，比如 map、 flatMap、 filter，它们在概念上与 Stream 类 中对应的方法十分相似。    </p>
+</li>
+<li><p>使用 Optional 会迫使你更积极地解引用 Optional 对象，以应对变量值缺失的问题，最 终，你能更有效地防止代码中出现不期而至的空指针异常。    </p>
+</li>
+<li><p>使用 Optional 能帮助你设计更好的 API，用户只需要阅读方法签名，就能了解该方法是 否接受一个 Optional类型的值。    </p>
+<p>​    </p>
+</li>
+</ol>
 
       
     </div>
@@ -451,7 +448,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://huuzii.wiki/2018/07/20/SpringBoot中使用RabbitMQ/" title="SpringBoot 中使用 RabbitMQ">http://huuzii.wiki/2018/07/20/SpringBoot中使用RabbitMQ/</a>
+    <a href="http://huuzii.wiki/2018/10/10/Java8 中的 Optional 类的基本使用/" title="Java8 中的 Optional 类的基本使用">http://huuzii.wiki/2018/10/10/Java8 中的 Optional 类的基本使用/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -466,9 +463,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/springboot/" rel="tag"># springboot</a>
-          
-            <a href="/tags/rabbitmq/" rel="tag"># rabbitmq</a>
+            <a href="/tags/Java8/" rel="tag"># Java8</a>
           
         </div>
       
@@ -481,14 +476,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/20/SpringBoot中使用RabbitMQ/" rel="next" title="SpringBoot 中使用 RabbitMQ">
+                <i class="fa fa-chevron-left"></i> SpringBoot 中使用 RabbitMQ
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/10/Java8 中的 Optional 类的基本使用/" rel="prev" title="Java8 中的 Optional 类的基本使用">
-                Java8 中的 Optional 类的基本使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/11/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -652,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Message-Broker-与-AMQP-简介"><span class="nav-number">1.</span> <span class="nav-text">Message Broker 与 AMQP 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RabbitMQ"><span class="nav-number">2.</span> <span class="nav-text">RabbitMQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot整合"><span class="nav-number">3.</span> <span class="nav-text">SpringBoot整合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-类入门"><span class="nav-number">1.</span> <span class="nav-text">Optional 类入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用-Optional-的几种模式"><span class="nav-number">2.</span> <span class="nav-text">应用 Optional 的几种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Optional-对象实例"><span class="nav-number">2.1.</span> <span class="nav-text">创建 Optional 对象实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问-Optional-对象的值"><span class="nav-number">2.2.</span> <span class="nav-text">访问 Optional 对象的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回默认值"><span class="nav-number">2.3.</span> <span class="nav-text">返回默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回异常"><span class="nav-number">2.4.</span> <span class="nav-text">返回异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Optional-的实战实例"><span class="nav-number">3.</span> <span class="nav-text">使用 Optional 的实战实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用map从-Optional-对象中提取和转换值"><span class="nav-number">3.1.</span> <span class="nav-text">使用map从 Optional 对象中提取和转换值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-flatMap-链接-Optional-对象"><span class="nav-number">3.2.</span> <span class="nav-text">使用 flatMap 链接 Optional 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-filter-剔除特定的值"><span class="nav-number">3.3.</span> <span class="nav-text">使用 filter 剔除特定的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
