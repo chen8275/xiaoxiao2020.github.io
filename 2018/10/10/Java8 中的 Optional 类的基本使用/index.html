@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     我们来看一个简单的实例：">
+<meta name="description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     抛砖我们来看一个简单的实例：">
 <meta name="keywords" content="Java8">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java8 中的 Optional 类的基本使用">
 <meta property="og:url" content="http://huuzii.wiki/2018/10/10/Java8 中的 Optional 类的基本使用/index.html">
 <meta property="og:site_name" content="Joyu_chen">
-<meta property="og:description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     我们来看一个简单的实例：">
+<meta property="og:description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     抛砖我们来看一个简单的实例：">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g6wx101itej30vu0bl3yl.jpg">
-<meta property="og:updated_time" content="2019-09-12T10:37:32.186Z">
+<meta property="og:updated_time" content="2019-09-12T10:41:47.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 中的 Optional 类的基本使用">
-<meta name="twitter:description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     我们来看一个简单的实例：">
+<meta name="twitter:description" content="Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。     抛砖我们来看一个简单的实例：">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g6wx101itej30vu0bl3yl.jpg">
 
 
@@ -359,7 +359,7 @@
 
       
         <p>Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。    </p>
-<p>我们来看一个简单的实例：</p>
+<h2 id="抛砖"><a href="#抛砖" class="headerlink" title="抛砖"></a>抛砖</h2><p>我们来看一个简单的实例：</p>
 <a id="more"></a>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String address = world.getCountry.getCity.getName;</span><br></pre></td></tr></table></figure>
@@ -651,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-类入门"><span class="nav-number">1.</span> <span class="nav-text">Optional 类入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用-Optional-的几种模式"><span class="nav-number">2.</span> <span class="nav-text">应用 Optional 的几种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Optional-对象实例"><span class="nav-number">2.1.</span> <span class="nav-text">创建 Optional 对象实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问-Optional-对象的值"><span class="nav-number">2.2.</span> <span class="nav-text">访问 Optional 对象的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回默认值"><span class="nav-number">2.3.</span> <span class="nav-text">返回默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回异常"><span class="nav-number">2.4.</span> <span class="nav-text">返回异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Optional-的实战实例"><span class="nav-number">3.</span> <span class="nav-text">使用 Optional 的实战实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用map从-Optional-对象中提取和转换值"><span class="nav-number">3.1.</span> <span class="nav-text">使用map从 Optional 对象中提取和转换值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-flatMap-链接-Optional-对象"><span class="nav-number">3.2.</span> <span class="nav-text">使用 flatMap 链接 Optional 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-filter-剔除特定的值"><span class="nav-number">3.3.</span> <span class="nav-text">使用 filter 剔除特定的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#抛砖"><span class="nav-number">1.</span> <span class="nav-text">抛砖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-类入门"><span class="nav-number">2.</span> <span class="nav-text">Optional 类入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用-Optional-的几种模式"><span class="nav-number">3.</span> <span class="nav-text">应用 Optional 的几种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Optional-对象实例"><span class="nav-number">3.1.</span> <span class="nav-text">创建 Optional 对象实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问-Optional-对象的值"><span class="nav-number">3.2.</span> <span class="nav-text">访问 Optional 对象的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回默认值"><span class="nav-number">3.3.</span> <span class="nav-text">返回默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回异常"><span class="nav-number">3.4.</span> <span class="nav-text">返回异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Optional-的实战实例"><span class="nav-number">4.</span> <span class="nav-text">使用 Optional 的实战实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用map从-Optional-对象中提取和转换值"><span class="nav-number">4.1.</span> <span class="nav-text">使用map从 Optional 对象中提取和转换值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-flatMap-链接-Optional-对象"><span class="nav-number">4.2.</span> <span class="nav-text">使用 flatMap 链接 Optional 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-filter-剔除特定的值"><span class="nav-number">4.3.</span> <span class="nav-text">使用 filter 剔除特定的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
