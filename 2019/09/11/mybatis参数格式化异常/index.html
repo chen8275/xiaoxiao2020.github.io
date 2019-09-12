@@ -783,6 +783,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="/js/src/md5.min.js"></script>
    <script type="text/javascript">
         var gitalk = new Gitalk({
           clientID: '76da0d0e1992fd67455b',
@@ -790,11 +791,12 @@
           repo: 'xiaoxiao2020.github.io',
           owner: 'xiaoxiao2020',
           admin: ['xiaoxiao2020'],
-          id: location.pathname,
+          id: md5(location.pathname),
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')
        </script>
+
 
 
 
