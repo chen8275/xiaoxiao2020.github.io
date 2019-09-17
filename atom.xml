@@ -18,8 +18,8 @@
   
   <entry>
     <title>mybatis参数格式化异常</title>
-    <link href="http://huuzii.wiki/2019/09/11/mybatis%E5%8F%82%E6%95%B0%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BC%82%E5%B8%B8/"/>
-    <id>http://huuzii.wiki/2019/09/11/mybatis参数格式化异常/</id>
+    <link href="http://huuzii.wiki/2019/09/11/mybatis%20%E5%8F%82%E6%95%B0%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BC%82%E5%B8%B8/"/>
+    <id>http://huuzii.wiki/2019/09/11/mybatis 参数格式化异常/</id>
     <published>2019-09-11T03:23:26.000Z</published>
     <updated>2019-09-11T03:45:55.045Z</updated>
     
@@ -36,52 +36,6 @@
     
     
       <category term="mybatis" scheme="http://huuzii.wiki/tags/mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>my first blog</title>
-    <link href="http://huuzii.wiki/2019/09/11/my-first-blog/"/>
-    <id>http://huuzii.wiki/2019/09/11/my-first-blog/</id>
-    <published>2019-09-11T02:03:04.000Z</published>
-    <updated>2019-09-11T03:24:08.541Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p><ol><li>全是静态文件，访问速度快；</li><li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li><li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li></ol><a id="more"></a><ol start="4"><li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li><li>博客内容可以轻松打包、转移、发布到其它平台；</li><li>等等；</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;使用github pages服务搭建博客的好处有：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;全是静态文件，访问速度快；&lt;/li&gt;
-&lt;li&gt;免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；&lt;/li&gt;
-&lt;li&gt;可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://huuzii.wiki/2019/09/11/hello-world/"/>
-    <id>http://huuzii.wiki/2019/09/11/hello-world/</id>
-    <published>2019-09-11T01:46:13.773Z</published>
-    <updated>2019-09-11T02:13:31.827Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><a id="more"></a><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
@@ -158,6 +112,51 @@
       <category term="springboot" scheme="http://huuzii.wiki/tags/springboot/"/>
     
       <category term="rabbitmq" scheme="http://huuzii.wiki/tags/rabbitmq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>请给百度网盘加速100倍</title>
+    <link href="http://huuzii.wiki/2018/07/12/%E8%AF%B7%E7%BB%99%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F100%E5%80%8D/"/>
+    <id>http://huuzii.wiki/2018/07/12/请给百度网盘加速100倍/</id>
+    <published>2018-07-12T02:10:10.000Z</published>
+    <updated>2019-09-17T08:50:59.090Z</updated>
+    
+    <content type="html"><![CDATA[<p>相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。</p><a id="more"></a><p>废话不多说先上图看效果，可以看到下载速度接近 3MB 每秒，这个速度依赖现有网络。</p><p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72m20rtdsj30xc043glj.jpg" alt="img"> </p><p>工具：<code>proxyee-down</code></p><p>工具地址：<a href="https://github.com/proxyee-down-org/proxyee-down" target="_blank" rel="noopener">https://github.com/proxyee-down-org/proxyee-down</a> </p><p>考虑到这个步骤有一些坑，尤其是没有技术背景的看文档可能还是有点困难，我这里把我的步骤讲一下，希望能够尽可能帮助到大家少走弯路。 </p><h2 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h2><p>地址：<br><a href="https://imhx-my.sharepoint.com/personal/pd_imhx_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpd_imhx_onmicrosoft_com%2FDocuments%2Fproxyee-down" target="_blank" rel="noopener">https://imhx-my.sharepoint.com/personal/pd_imhx_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpd_imhx_onmicrosoft_com%2FDocuments%2Fproxyee-down</a></p><p>里面有对应的版本，根据不同的操作系统下载就行。</p><p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72ltwjzibj31hc0begm9.jpg" alt="1568708511226"></p><p>比如我电脑版本是 windows 64 下载的是 <code>Proxyee Down.3.4.windows.x64.7z</code></p><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="解压并运行"><a href="#解压并运行" class="headerlink" title="解压并运行"></a>解压并运行</h3><p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72lt0by9cj311x09274m.jpg" alt="1568708708517"> </p><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>打开软件后，来到扩展管理这栏，里面有三个扩展：</p><ul><li>百度云下载</li><li>全网嗅探</li><li>B站视频下载</li></ul><p>下载百度云下载扩展并且打开开关</p><p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72ltmpfl9j30s20hj0vn.jpg" alt="1568709183283"></p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>打开百度云网盘网页，点击直链下载。就会切换到 <code>proxyee-down</code> 进行下载啦~</p><p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72lsirbijj31bw0btt9c.jpg" alt="1568709290259"></p><p>百度云100倍下载之旅现在开始啦，嘎嘎嘎嘎 ~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="tool" scheme="http://huuzii.wiki/categories/tool/"/>
+    
+    
+      <category term="tool" scheme="http://huuzii.wiki/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://huuzii.wiki/2018/04/10/hello-world/"/>
+    <id>http://huuzii.wiki/2018/04/10/hello-world/</id>
+    <published>2018-04-10T02:10:10.000Z</published>
+    <updated>2019-09-17T02:25:27.675Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><a id="more"></a><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
     
   </entry>
   
