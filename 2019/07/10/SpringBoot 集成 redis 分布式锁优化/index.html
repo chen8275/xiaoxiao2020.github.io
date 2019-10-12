@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
+<meta name="description" content="继上一篇 《SpringBoot 集成 redis 分布式锁》 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
 <meta name="keywords" content="springboot,redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot 集成 redis 分布式锁优化">
 <meta property="og:url" content="http://huuzii.wiki/2019/07/10/SpringBoot 集成 redis 分布式锁优化/index.html">
 <meta property="og:site_name" content="Joyu_chen">
-<meta property="og:description" content="继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
+<meta property="og:description" content="继上一篇 《SpringBoot 集成 redis 分布式锁》 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190303142906677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhem91MQ==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g7ud9m50ayj30fv0lv0tj.jpg">
-<meta property="og:updated_time" content="2019-10-12T02:41:29.363Z">
+<meta property="og:updated_time" content="2019-10-12T06:29:39.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot 集成 redis 分布式锁优化">
-<meta name="twitter:description" content="继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
+<meta name="twitter:description" content="继上一篇 《SpringBoot 集成 redis 分布式锁》 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190303142906677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhem91MQ==,size_16,color_FFFFFF,t_70">
 
 
@@ -359,7 +359,7 @@
       
 
       
-        <p>继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。 </p>
+        <p>继上一篇 《SpringBoot 集成 redis 分布式锁》 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。 </p>
 <a id="more"></a>
 
 <p>为了解决上篇出现的死锁问题，提出了双重防死锁，可以更好的解决死锁问题。</p>
