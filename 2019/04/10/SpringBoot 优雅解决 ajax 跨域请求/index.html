@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="springboot,redis,">
+  <meta name="keywords" content="springboot,ajax,">
 
 
 
@@ -81,21 +81,20 @@
 
 
 
-<meta name="description" content="继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
-<meta name="keywords" content="springboot,redis">
+<meta name="description" content="今天打开页面报错，地址是有效的，但浏览器会报 “No ‘Access-Control-Allow-Origin’ header is present on the requested resource “ 错误页面如下：  这是由于 ajax 跨域请求造成的">
+<meta name="keywords" content="springboot,ajax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot 集成 redis 分布式锁优化">
-<meta property="og:url" content="http://huuzii.wiki/2019/07/10/SpringBoot 集成 redis 分布式锁优化/index.html">
+<meta property="og:title" content="SpringBoot 优雅解决 ajax 跨域请求">
+<meta property="og:url" content="http://huuzii.wiki/2019/04/10/SpringBoot 优雅解决 ajax 跨域请求/index.html">
 <meta property="og:site_name" content="Joyu_chen">
-<meta property="og:description" content="继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
+<meta property="og:description" content="今天打开页面报错，地址是有效的，但浏览器会报 “No ‘Access-Control-Allow-Origin’ header is present on the requested resource “ 错误页面如下：  这是由于 ajax 跨域请求造成的">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190303142906677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhem91MQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g7ud9m50ayj30fv0lv0tj.jpg">
-<meta property="og:updated_time" content="2019-10-12T02:41:29.363Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g71ldngtkcj30qp065t9q.jpg">
+<meta property="og:updated_time" content="2019-10-12T06:27:51.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot 集成 redis 分布式锁优化">
-<meta name="twitter:description" content="继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190303142906677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhem91MQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="SpringBoot 优雅解决 ajax 跨域请求">
+<meta name="twitter:description" content="今天打开页面报错，地址是有效的，但浏览器会报 “No ‘Access-Control-Allow-Origin’ header is present on the requested resource “ 错误页面如下：  这是由于 ajax 跨域请求造成的">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g71ldngtkcj30qp065t9q.jpg">
 
 
 
@@ -125,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://huuzii.wiki/2019/07/10/SpringBoot 集成 redis 分布式锁优化/">
+  <link rel="canonical" href="http://huuzii.wiki/2019/04/10/SpringBoot 优雅解决 ajax 跨域请求/">
 
 
 
 
 
-  <title>SpringBoot 集成 redis 分布式锁优化 | Joyu_chen</title>
+  <title>SpringBoot 优雅解决 ajax 跨域请求 | Joyu_chen</title>
   
 
 
@@ -270,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://huuzii.wiki/2019/07/10/SpringBoot 集成 redis 分布式锁优化/">
+    <link itemprop="mainEntityOfPage" href="http://huuzii.wiki/2019/04/10/SpringBoot 优雅解决 ajax 跨域请求/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiaoxiao2020">
@@ -287,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringBoot 集成 redis 分布式锁优化</h1>
+          <h1 class="post-title" itemprop="name headline">SpringBoot 优雅解决 ajax 跨域请求</h1>
         
 
         <div class="post-meta">
@@ -299,8 +298,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-10T11:23:26+08:00">
-                2019-07-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-10T10:10:10+08:00">
+                2019-04-10
               </time>
             
 
@@ -359,20 +358,48 @@
       
 
       
-        <p>继上一篇 SpringBoot 集成 redis 分布式锁 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。 </p>
+        <p>今天打开页面报错，地址是有效的，但浏览器会报 “No ‘Access-Control-Allow-Origin’ header is present on the requested resource “ 错误页面如下：</p>
+<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g71ldngtkcj30qp065t9q.jpg" alt="1568621277875"></p>
+<p>这是由于 ajax 跨域请求造成的</p>
 <a id="more"></a>
+<h2 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h2><p>由于浏览器同源策略（同源策略，它是由 Netscape 提出的一个著名的安全策略。现在所有支持JavaScript 的浏览器都会使用这个策略。所谓同源是指域名、协议、端口相同），凡是发送请求 url 的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。 </p>
+<h2 id="How-does-it-works"><a href="#How-does-it-works" class="headerlink" title="How does it works ?"></a>How does it works ?</h2><p>CORS请求（包括预选的带有选项方法）被自动注册到各种 HandlerMapping 。他们处理 CROS 准备请求并拦截 CORS 简单和实际请求，这得益于 CorsProcessor 实现（默认情况下默认<a href="https://github.com/spring-projects/spring-framework/blob/master/spring-web/src/main/java/org/springframework/web/cors/DefaultCorsProcessor.java" target="_blank" rel="noopener">DefaultCorsProcessor </a>处理器），以便添加相关的CORS响应头（如 Access-Control-Allow-Origin ）。 <a href="https://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html" target="_blank" rel="noopener">CorsConfiguration</a>  允许您指定CORS请求应该如何处理：允许 origins, headers, methods 等。</p>
+<p>a、<code>AbstractHandlerMapping#setCorsConfiguration()</code> 允许指定一个映射，其中有几个<a href="https://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html" target="_blank" rel="noopener">CorsConfiguration</a> 映射在路径模式上，比如/api/**。</p>
+<p>b、子类可以通过重写AbstractHandlerMapping类的getCorsConfiguration(Object, HttpServletRequest)方法来提供自己的CorsConfiguration。</p>
+<p>c、处理程序可以实现 <a href="https://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfigurationSource.html" target="_blank" rel="noopener"><code>CorsConfigurationSource</code></a> 接口（如<a href="https://github.com/spring-projects/spring-framework/blob/master/spring-webmvc/src/main/java/org/springframework/web/servlet/resource/ResourceHttpRequestHandler.java" target="_blank" rel="noopener"><code>ResourceHttpRequestHandler</code></a>），以便为每个请求提供一个<a href="https://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html" target="_blank" rel="noopener">CorsConfiguration</a>。</p>
+<h2 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h2><h3 id="普通跨域请求解决方案"><a href="#普通跨域请求解决方案" class="headerlink" title="普通跨域请求解决方案"></a><strong>普通跨域请求解决方案</strong></h3><p><strong>1. 请求接口添加注解</strong> <code>@CrossOrigin(origins = &quot;*&quot;, maxAge = 3600)</code></p>
+<p>说明：<code>origins = &quot;*&quot;</code> origins 值为当前请求该接口的域 </p>
+<p><strong>2. 通用配置</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 跨域请求配置</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> chendesheng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019/9/16 19:07</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CorsConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CorsFilter <span class="title">corsFilter</span><span class="params">()</span></span>&#123;</span><br><span class="line">        UrlBasedCorsConfigurationSource source = <span class="keyword">new</span> UrlBasedCorsConfigurationSource();</span><br><span class="line">        source.registerCorsConfiguration(<span class="string">"/**"</span>,buildconfig());</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> CorsFilter(source);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> CorsConfiguration <span class="title">buildconfig</span><span class="params">()</span></span>&#123;</span><br><span class="line">        CorsConfiguration corsConfiguration = <span class="keyword">new</span> CorsConfiguration();</span><br><span class="line">        corsConfiguration.addAllowedOrigin(<span class="string">"*"</span>);</span><br><span class="line">        corsConfiguration.addAllowedHeader(<span class="string">"*"</span>);</span><br><span class="line">        corsConfiguration.addAllowedMethod(<span class="string">"*"</span>);</span><br><span class="line">        <span class="keyword">return</span> corsConfiguration;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>为了解决上篇出现的死锁问题，提出了双重防死锁，可以更好的解决死锁问题。</p>
-<p>原理图如下:</p>
-<p><img src="https://img-blog.csdnimg.cn/20190303142906677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rhem91MQ==,size_16,color_FFFFFF,t_70" alt="å¨è¿éæå¥å¾çæè¿°"> </p>
-<h2 id="过程分析"><a href="#过程分析" class="headerlink" title="过程分析"></a>过程分析</h2><p>1、当A通过 setnx(lockkey,currenttime+timeout) 命令能成功设置 lockkey 时，即返回值为1；<br>2、当A通过 setnx(lockkey,currenttime+timeout) 命令不能成功设置 lockkey 时，这是不能直接断定获取锁失败；因为我们在设置锁时，设置了锁的超时时间 timeout，当前时间大于 redis 中存储键值为 lockkey 的 value 值时，可以认为上一任的拥有者对锁的使用权已经失效了，A就可以强行拥有该锁；具体判定过程如下；<br>3、A通过 get(lockkey)，获取 redis 中的存储键值为 lockkey 的 value 值，即获取锁的相对时间 lockvalueA；<br>4、lockvalueA!=null &amp;&amp; currenttime&gt;lockvalue，A通过当前的时间与锁设置的时间做比较，如果当前时间已经大于锁设置的时间临界，即可以进一步判断是否可以获取锁，否则说明该锁还在被占用，A就还不能获取该锁，结束，获取锁失败；<br>5、步骤4返回结果为 true 后，通过 getSet 设置新的超时时间，并返回旧值 lockvalueB，以作判断，因为在分布式环境，在进入这里时可能另外的进程获取到锁并对值进行了修改，只有旧值与返回的值一致才能说明中间未被其他进程获取到这个锁；<br>6、lockvalueB == null || lockvalueA==lockvalueB，判断：若果 lockvalueB 为null，说明该锁已经被释放了，此时该进程可以获取锁；旧值与返回的 lockvalueB 一致说明中间未被其他进程获取该锁，可以获取锁；否则不能获取锁，结束，获取锁失败。</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>项目代码结构图</p>
-<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g7ud9m50ayj30fv0lv0tj.jpg" alt="1570783101690"></p>
-<p>把上篇的拦截器类（LockMethodInterceptor）的代码修改如下:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tuhu.twosample.chen.distributed.interceptor;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.tuhu.twosample.chen.distributed.annotation.CacheLock;</span><br><span class="line"><span class="keyword">import</span> com.tuhu.twosample.chen.distributed.common.CacheKeyGenerator;</span><br><span class="line"><span class="keyword">import</span> org.apache.logging.log4j.util.PropertiesUtil;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.Around;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.Aspect;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.reflect.MethodSignature;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.core.StringRedisTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.Scheduled;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.StringUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> chendesheng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019/10/11 16:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LockMethodInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LockMethodInterceptor</span><span class="params">(StringRedisTemplate lockRedisTemplate, CacheKeyGenerator cacheKeyGenerator)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.lockRedisTemplate = lockRedisTemplate;</span><br><span class="line">        <span class="keyword">this</span>.cacheKeyGenerator = cacheKeyGenerator;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> StringRedisTemplate lockRedisTemplate;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> CacheKeyGenerator cacheKeyGenerator;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Around</span>(<span class="string">"execution(public * *(..)) &amp;&amp; @annotation(com.tuhu.twosample.chen.distributed.annotation.CacheLock)"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">interceptor</span><span class="params">(ProceedingJoinPoint pjp)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        MethodSignature signature = (MethodSignature) pjp.getSignature();</span><br><span class="line">        Method method = signature.getMethod();</span><br><span class="line">        CacheLock lock = method.getAnnotation(CacheLock.class);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isEmpty(lock.prefix())) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"lock key can't be null..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">final</span> String lockKey = cacheKeyGenerator.getLockKey(pjp);</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> lockTime = lock.expire();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//key不存在才能设置成功，获得了分布式锁，设置锁过期时间</span></span><br><span class="line">            <span class="keyword">final</span> Boolean success = lockRedisTemplate.opsForValue().setIfAbsent(lockKey, String.valueOf(System.currentTimeMillis()+lockTime));</span><br><span class="line">            <span class="keyword">if</span> (success) &#123;</span><br><span class="line">                lockRedisTemplate.expire(lockKey, lock.expire(), lock.timeUnit());</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">                String lockValueA = lockRedisTemplate.opsForValue().get(lockKey);</span><br><span class="line">                <span class="comment">//查到锁的值并与当前时间比较检查其是否已经超时，若超时则可以重新获取锁</span></span><br><span class="line">                <span class="keyword">if</span> (lockValueA!=<span class="keyword">null</span> &amp;&amp; System.currentTimeMillis() &gt; Long.valueOf(lockValueA))&#123;</span><br><span class="line">                    <span class="comment">//通过用当前时间戳 getAndSet 操作会给对应的key设置新的值并返回旧值，这是一个原子操作</span></span><br><span class="line">                    String lockValueB = lockRedisTemplate.opsForValue().getAndSet(lockKey,String.valueOf(System.currentTimeMillis()+lockTime));</span><br><span class="line">                    <span class="comment">//redis返回nil,则说明该值已经无效</span></span><br><span class="line">                    <span class="keyword">if</span> (lockValueB == <span class="keyword">null</span> &amp;&amp; StringUtils.pathEquals(lockValueA,lockValueB))&#123;</span><br><span class="line">                        <span class="comment">//获取锁成功</span></span><br><span class="line">                        lockRedisTemplate.expire(lockKey, lock.expire(), lock.timeUnit());</span><br><span class="line">                    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="comment">//获取锁失败</span></span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"请勿重复请求"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">//按理来说 我们应该抛出一个自定义的 CacheLockException 异常;</span></span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"请勿重复请求"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> pjp.proceed();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Throwable throwable) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"系统异常"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//如果演示的话需要注释该代码;实际应该放开</span></span><br><span class="line">            <span class="comment">// lockRedisTemplate.delete(lockKey);</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="ajax自定义headers的跨域请求"><a href="#ajax自定义headers的跨域请求" class="headerlink" title="ajax自定义headers的跨域请求"></a><strong>ajax自定义headers的跨域请求</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">        type:<span class="string">"GET"</span>,</span><br><span class="line">        url:<span class="string">"http://localhost:8766/main/currency/sginInState"</span>,</span><br><span class="line">        dataType:<span class="string">"JSON"</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            uid:userId</span><br><span class="line">        &#125;,</span><br><span class="line">        beforeSend: <span class="function"><span class="keyword">function</span> (<span class="params">XMLHttpRequest</span>) </span>&#123;</span><br><span class="line">            XMLHttpRequest.setRequestHeader(<span class="string">"Authorization"</span>, access_token);</span><br><span class="line">        &#125;,</span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(res.code)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
 
-<p>这样我们双重防死锁的 redis 分布式锁也已经实现了。</p>
-<h2 id="优化点"><a href="#优化点" class="headerlink" title="优化点"></a>优化点</h2><p>加入了超时时间判断锁是否超时了，即使A在成功设置了锁之后，服务器就立即出现宕机或是重启，也不会出现死锁问题；因为B在尝试获取锁的时候，如果不能setnx成功，会去获取 redis 中锁的超时时间与当前的系统时间做比较，如果当前的系统时间已经大于锁超时时间，说明A已经对锁的使用权失效，B能继续判断能否获取锁，解决了redis分布式锁的死锁问题。</p>
+<p>此处请求报错：OPTIONS <a href="http://localhost:8766/main/currency/sginInState" target="_blank" rel="noopener">http://localhost:8766/main/currency/sginInState</a> 500 </p>
+<p>普通跨域的解决方案已经无法解决这种问题，为什么会出现OPTIONS请求呢？ </p>
+<p>原因：</p>
+<p>浏览器会在发送真正请求之前，先发送一个方法为OPTIONS的预检请求 Preflighted requests 这个请求是用来验证本次请求是否安全的，但是并不是所有请求都会发送，需要符合以下条件： </p>
+<ul>
+<li>请求方法不是GET/HEAD/POST </li>
+<li>POST 请求的 Content-Type 并非 application/x-www-form-urlencoded, multipart/form-data 或text/plain </li>
+<li>请求设置了自定义的header字段 </li>
+</ul>
+<p>对于管理端的接口，我有对接口进行权限校验，每次请求需要在header中携带自定义的字段（token），所以浏览器会多发送一个 OPTIONS 请求去验证此次请求的安全性。 </p>
+<p>为何 OPTIONS 请求是500呢？</p>
+<p>OPTIONS请求只会携带自定义的字段，并不会将相应的值带入进去，而后台校验 token 字段时 token 为 NULL，所以验证不通过，抛出了一个异常。</p>
+<p>如何解决这个异常？</p>
+<p><strong>1. spring boot项目application.yml中添加</strong>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">mvc:</span><br><span class="line">dispatch-options-request: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 添加过滤器配置</strong></p>
+<p> 第一步：手写 RequestFilter 请求过滤器配置类此类需要实现 HandlerInterceptor 类，HandlerInterceptor 类是 org.springframework.web.servlet.HandlerInterceptor 下的。 </p>
+<p>具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestFilter</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandler</span><span class="params">(HttpServletRequest request,HttpServletResponse response,Object handler)</span></span>&#123;</span><br><span class="line">       response.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">       response.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"true"</span>);</span><br><span class="line">       response.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS"</span>);</span><br><span class="line">       response.setHeader(<span class="string">"Access-Control-Max-Age"</span>, <span class="string">"86400"</span>);</span><br><span class="line">       response.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Authorization"</span>);</span><br><span class="line">       <span class="comment">// 如果是OPTIONS请求则结束</span></span><br><span class="line">       <span class="keyword">if</span> (HttpMethod.OPTIONS.toString().equals(request.getMethod())) &#123;</span><br><span class="line">           response.setStatus(HttpStatus.NO_CONTENT.value());</span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二步：手写 MyWebConfiguration 此类需要继承 WebMvcConfigurationSupport 。 </p>
+<p>具体代码实现： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyWebConfiguration</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurationSupport</span></span>&#123;</span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> RequestFilter requestFilter;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 跨域拦截器</span></span><br><span class="line">        registry.addInterceptor(requestFilter).addPathPatterns(<span class="string">"/**"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样就优雅的解决了 ajax 跨域请求的问题。</p>
 
       
     </div>
@@ -393,7 +420,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://huuzii.wiki/2019/07/10/SpringBoot 集成 redis 分布式锁优化/" title="SpringBoot 集成 redis 分布式锁优化">http://huuzii.wiki/2019/07/10/SpringBoot 集成 redis 分布式锁优化/</a>
+    <a href="http://huuzii.wiki/2019/04/10/SpringBoot 优雅解决 ajax 跨域请求/" title="SpringBoot 优雅解决 ajax 跨域请求">http://huuzii.wiki/2019/04/10/SpringBoot 优雅解决 ajax 跨域请求/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -410,7 +437,7 @@
           
             <a href="/tags/springboot/" rel="tag"># springboot</a>
           
-            <a href="/tags/redis/" rel="tag"># redis</a>
+            <a href="/tags/ajax/" rel="tag"># ajax</a>
           
         </div>
       
@@ -423,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/06/SpringBoot 集成 redis 分布式锁/" rel="next" title="SpringBoot 集成 redis 分布式锁">
-                <i class="fa fa-chevron-left"></i> SpringBoot 集成 redis 分布式锁
+              <a href="/2019/03/28/Java8 中的 Optional 类的基本使用/" rel="next" title="Java8 中的 Optional 类的基本使用">
+                <i class="fa fa-chevron-left"></i> Java8 中的 Optional 类的基本使用
               </a>
             
           </div>
@@ -433,8 +460,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/15/SpringBoot 集成 Redisson 实现分布式锁/" rel="prev" title="SpringBoot 集成 Redisson 实现分布式锁">
-                SpringBoot 集成 Redisson 实现分布式锁 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/01/SpringBoot 整合 redis 踩坑日志/" rel="prev" title="SpringBoot 整合 redis 踩坑日志">
+                SpringBoot 整合 redis 踩坑日志 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -598,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#过程分析"><span class="nav-number">1.</span> <span class="nav-text">过程分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化点"><span class="nav-number">3.</span> <span class="nav-text">优化点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是跨域"><span class="nav-number">1.</span> <span class="nav-text">什么是跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-does-it-works"><span class="nav-number">2.</span> <span class="nav-text">How does it works ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决"><span class="nav-number">3.</span> <span class="nav-text">如何解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通跨域请求解决方案"><span class="nav-number">3.1.</span> <span class="nav-text">普通跨域请求解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax自定义headers的跨域请求"><span class="nav-number">3.2.</span> <span class="nav-text">ajax自定义headers的跨域请求</span></a></li></ol></li></ol></div>
             
 
           </div>
