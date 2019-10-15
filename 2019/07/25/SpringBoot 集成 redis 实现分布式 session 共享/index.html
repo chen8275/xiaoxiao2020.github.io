@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="tool,">
+  <meta name="keywords" content="springboot,redis,">
 
 
 
@@ -82,24 +82,22 @@
 
 
 
-<meta name="description" content="相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。">
-<meta name="keywords" content="tool">
+<meta name="description" content="session 是服务器用来保存用户操作的一系列会话信息，由 Web 容器进行管理。单机情况下，不存在 session 共享的情况，分布式情况下，如果不进行 session 共享会出现请求落到不同机器要重复登录的情况 。单点登录可以用 cookie+redis 的方式，第一次登陆生成 token，将 token 和用户以键值对的方式存入 redis。并将 token 写入cookie 返回到浏览器">
+<meta name="keywords" content="springboot,redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="请给百度网盘加速100倍">
-<meta property="og:url" content="http://www.huuzii.wiki/2019/03/12/请给百度网盘加速100倍/index.html">
+<meta property="og:title" content="SpringBoot 集成 redis 实现分布式 session 共享">
+<meta property="og:url" content="http://www.huuzii.wiki/2019/07/25/SpringBoot 集成 redis 实现分布式 session 共享/index.html">
 <meta property="og:site_name" content="Joyu_chen">
-<meta property="og:description" content="相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。">
+<meta property="og:description" content="session 是服务器用来保存用户操作的一系列会话信息，由 Web 容器进行管理。单机情况下，不存在 session 共享的情况，分布式情况下，如果不进行 session 共享会出现请求落到不同机器要重复登录的情况 。单点登录可以用 cookie+redis 的方式，第一次登陆生成 token，将 token 和用户以键值对的方式存入 redis。并将 token 写入cookie 返回到浏览器">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g72m20rtdsj30xc043glj.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g72ltwjzibj31hc0begm9.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g72lt0by9cj311x09274m.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g72ltmpfl9j30s20hj0vn.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g72lsirbijj31bw0btt9c.jpg">
-<meta property="og:updated_time" content="2019-10-12T06:27:51.448Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw6dmuy1j30dx0but90.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw6q1rmnj316p0lswg4.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw71xby6j316o0k4abk.jpg">
+<meta property="og:updated_time" content="2019-10-15T07:11:14.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="请给百度网盘加速100倍">
-<meta name="twitter:description" content="相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g72m20rtdsj30xc043glj.jpg">
+<meta name="twitter:title" content="SpringBoot 集成 redis 实现分布式 session 共享">
+<meta name="twitter:description" content="session 是服务器用来保存用户操作的一系列会话信息，由 Web 容器进行管理。单机情况下，不存在 session 共享的情况，分布式情况下，如果不进行 session 共享会出现请求落到不同机器要重复登录的情况 。单点登录可以用 cookie+redis 的方式，第一次登陆生成 token，将 token 和用户以键值对的方式存入 redis。并将 token 写入cookie 返回到浏览器">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw6dmuy1j30dx0but90.jpg">
 
 
 
@@ -129,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.huuzii.wiki/2019/03/12/请给百度网盘加速100倍/">
+  <link rel="canonical" href="http://www.huuzii.wiki/2019/07/25/SpringBoot 集成 redis 实现分布式 session 共享/">
 
 
 
 
 
-  <title>请给百度网盘加速100倍 | Joyu_chen</title>
+  <title>SpringBoot 集成 redis 实现分布式 session 共享 | Joyu_chen</title>
   
 
 
@@ -274,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.huuzii.wiki/2019/03/12/请给百度网盘加速100倍/">
+    <link itemprop="mainEntityOfPage" href="http://www.huuzii.wiki/2019/07/25/SpringBoot 集成 redis 实现分布式 session 共享/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiaoxiao2020">
@@ -291,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">请给百度网盘加速100倍</h1>
+          <h1 class="post-title" itemprop="name headline">SpringBoot 集成 redis 实现分布式 session 共享</h1>
         
 
         <div class="post-meta">
@@ -303,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-12T10:10:10+08:00">
-                2019-03-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-25T11:23:26+08:00">
+                2019-07-25
               </time>
             
 
@@ -326,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
+                  <a href="/categories/springboot/" itemprop="url" rel="index">
+                    <span itemprop="name">springboot</span>
                   </a>
                 </span>
 
@@ -343,7 +341,7 @@
 
           
           
-             <span id="/2019/03/12/请给百度网盘加速100倍/" class="leancloud_visitors" data-flag-title="请给百度网盘加速100倍">
+             <span id="/2019/07/25/SpringBoot 集成 redis 实现分布式 session 共享/" class="leancloud_visitors" data-flag-title="SpringBoot 集成 redis 实现分布式 session 共享">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,30 +372,30 @@
       
 
       
-        <p>相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。</p>
+        <p>session 是服务器用来保存用户操作的一系列会话信息，由 Web 容器进行管理。单机情况下，不存在 session 共享的情况，分布式情况下，如果不进行 session 共享会出现请求落到不同机器要重复登录的情况 。单点登录可以用 cookie+redis 的方式，第一次登陆生成 token，将 token 和用户以键值对的方式存入 redis。并将 token 写入cookie 返回到浏览器。以后每次请求 cookie 都会携带上 token。服务端获取 token 然后去 redis 中查找是否存在此用户从而实现单点登录。</p>
 <a id="more"></a>
+<p>项目代码结构图结构</p>
+<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw6dmuy1j30dx0but90.jpg" alt="1571122427195"></p>
+<p>准备工作</p>
+<p>启动 eureka 注册中心 eureka-register，然后新建两个 springboot 服务分别是 four-sample 和 five-sample。</p>
+<p>以 four-sample 演示操作</p>
+<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">   &lt;!--spring boot 与redis应用基本环境配置 --&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;!--spring session 与redis应用基本环境配置,需要开启redis后才可以使用，不然启动Spring boot会			报错 --&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.session&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
-<p>废话不多说先上图看效果，可以看到下载速度接近 3MB 每秒，这个速度依赖现有网络。</p>
-<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72m20rtdsj30xc043glj.jpg" alt="img"> </p>
-<p>工具：<code>proxyee-down</code></p>
-<p>工具地址：<a href="https://github.com/proxyee-down-org/proxyee-down" target="_blank" rel="noopener">https://github.com/proxyee-down-org/proxyee-down</a> </p>
-<p>考虑到这个步骤有一些坑，尤其是没有技术背景的看文档可能还是有点困难，我这里把我的步骤讲一下，希望能够尽可能帮助到大家少走弯路。 </p>
-<h2 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h2><p>地址：<br><a href="https://imhx-my.sharepoint.com/personal/pd_imhx_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpd_imhx_onmicrosoft_com%2FDocuments%2Fproxyee-down" target="_blank" rel="noopener">https://imhx-my.sharepoint.com/personal/pd_imhx_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpd_imhx_onmicrosoft_com%2FDocuments%2Fproxyee-down</a></p>
-<p>里面有对应的版本，根据不同的操作系统下载就行。</p>
-<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72ltwjzibj31hc0begm9.jpg" alt="1568708511226"></p>
-<p>比如我电脑版本是 windows 64 下载的是 <code>Proxyee Down.3.4.windows.x64.7z</code></p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="解压并运行"><a href="#解压并运行" class="headerlink" title="解压并运行"></a>解压并运行</h3><p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72lt0by9cj311x09274m.jpg" alt="1568708708517"> </p>
-<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>打开软件后，来到扩展管理这栏，里面有三个扩展：</p>
-<ul>
-<li>百度云下载</li>
-<li>全网嗅探</li>
-<li>B站视频下载</li>
-</ul>
-<p>下载百度云下载扩展并且打开开关</p>
-<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72ltmpfl9j30s20hj0vn.jpg" alt="1568709183283"></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>打开百度云网盘网页，点击直链下载。就会切换到 <code>proxyee-down</code> 进行下载啦~</p>
-<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g72lsirbijj31bw0btt9c.jpg" alt="1568709290259"></p>
-<p>百度云100倍下载之旅现在开始啦，嘎嘎嘎嘎 ~</p>
+<h3 id="属性配置"><a href="#属性配置" class="headerlink" title="属性配置"></a>属性配置</h3><p>在 <code>application.yml</code> 资源文件中添加 redis 和 eureka 相关配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: <span class="number">8086</span></span><br><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: spring-cloud-producer1</span><br><span class="line">  redis:</span><br><span class="line">      host: <span class="number">127.0</span>.0.1</span><br><span class="line">      port: <span class="number">6379</span></span><br><span class="line">      timeout: <span class="number">5000</span>ms</span><br><span class="line">      password:</span><br><span class="line">      database: <span class="number">0</span></span><br><span class="line">      jedis:</span><br><span class="line">        pool:</span><br><span class="line">          max-active: <span class="number">50</span></span><br><span class="line">          max-wait: <span class="number">3000</span>ms</span><br><span class="line">          max-idle: <span class="number">20</span></span><br><span class="line">          min-idle: <span class="number">2</span></span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    service-url:</span><br><span class="line">      defaultZone: http:<span class="comment">//localhost:8761/eureka/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tuhu.foursample;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.EnableEurekaClient;</span><br><span class="line"><span class="keyword">import</span> org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> chendesheng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2019-08-06</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="meta">@EnableRedisHttpSession</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FourSampleApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(FourSampleApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(value=<span class="string">"/setSession"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">setSession</span><span class="params">(HttpServletRequest request)</span></span>&#123;</span><br><span class="line">        Map&lt;String,Object&gt; map = <span class="keyword">new</span> HashMap(<span class="number">10</span>);</span><br><span class="line">        map.put(<span class="string">"name"</span>,<span class="string">"超级管理员"</span>);</span><br><span class="line">        map.put(<span class="string">"account"</span>,<span class="string">"admin"</span>);</span><br><span class="line">        request.getSession().setAttribute(<span class="string">"userSession"</span>,map);</span><br><span class="line">        String sessionId = request.getSession().getId();</span><br><span class="line">        <span class="keyword">return</span> sessionId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>@EnableRedisHttpSession</code> 来开启spring session支持，使用<code>@EnableEurekaClient</code> 将服务注册到注册中兴。five-sample 服务的配置如法炮制，只需修改端口号和程序名即可。</p>
+<p>five-sample 服务配置完以后，我们需要在主程序拿到 <code>userSession</code>，看看 session 是否与服务 four-sample 里的一致。five-sample 主程序代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tuhu.fivesample;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.EnableEurekaClient;</span><br><span class="line"><span class="keyword">import</span> org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> chendesheng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2019-08-06</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@EnableRedisHttpSession</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FiveSampleApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(FiveSampleApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(value=<span class="string">"/getSession"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String,Object&gt; <span class="title">getSession</span><span class="params">(HttpServletRequest request)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        String sessionId = request.getSession().getId();</span><br><span class="line">        Object obj = request.getSession().getAttribute(<span class="string">"userSession"</span>);</span><br><span class="line">        Map&lt;String,Object&gt; map = <span class="keyword">new</span> HashMap(<span class="number">10</span>);</span><br><span class="line">        map.put(<span class="string">"sessionId"</span>,sessionId);</span><br><span class="line">        map.put(<span class="string">"user"</span>,obj);</span><br><span class="line">        <span class="keyword">return</span> map;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>现在我们启动注册中心 eureka-register 和两个服务 four-sample 和 five-sample</p>
+<p>用 postman 请求 four-sample，我们可以看到</p>
+<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw6q1rmnj316p0lswg4.jpg" alt="1571121861255"></p>
+<p>再用postman请求five-sample，我们可以看到</p>
+<p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g7yw71xby6j316o0k4abk.jpg" alt="1571121906947"></p>
+<p>ok 这样我们就实现了 session 共享，可以看到 SpringBoot 集成 redis 实现 session 共享是如此的简单，仅仅需要一个依赖就可以解决。我们写了一些代码，也做了一些配置，但是全都和 Spring Session 无关，配置是配置 Redis，代码就是普通的 HttpSession，和 Spring Session 没有任何关系！唯一和 Spring Session 相关的，可能就是我在一开始引入了 Spring Session 的依赖吧！</p>
 
       
     </div>
@@ -418,7 +416,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://www.huuzii.wiki/2019/03/12/请给百度网盘加速100倍/" title="请给百度网盘加速100倍">http://www.huuzii.wiki/2019/03/12/请给百度网盘加速100倍/</a>
+    <a href="http://www.huuzii.wiki/2019/07/25/SpringBoot 集成 redis 实现分布式 session 共享/" title="SpringBoot 集成 redis 实现分布式 session 共享">http://www.huuzii.wiki/2019/07/25/SpringBoot 集成 redis 实现分布式 session 共享/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -433,7 +431,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tool/" rel="tag"># tool</a>
+            <a href="/tags/springboot/" rel="tag"># springboot</a>
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
           
         </div>
       
@@ -446,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/10/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/15/SpringBoot 集成 Redisson 实现分布式锁/" rel="next" title="SpringBoot 集成 Redisson 实现分布式锁">
+                <i class="fa fa-chevron-left"></i> SpringBoot 集成 Redisson 实现分布式锁
               </a>
             
           </div>
@@ -455,10 +455,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/20/mybatis 参数格式化异常/" rel="prev" title="mybatis参数格式化异常">
-                mybatis参数格式化异常 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载工具"><span class="nav-number">1.</span> <span class="nav-text">下载工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">2.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解压并运行"><span class="nav-number">2.1.</span> <span class="nav-text">解压并运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装插件"><span class="nav-number">2.2.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入依赖"><span class="nav-number">1.</span> <span class="nav-text">引入依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性配置"><span class="nav-number">2.</span> <span class="nav-text">属性配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主程序"><span class="nav-number">3.</span> <span class="nav-text">主程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">4.</span> <span class="nav-text">测试</span></a></li></ol></div>
             
 
           </div>
