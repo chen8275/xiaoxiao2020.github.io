@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>SpringBoot 集成 WebSocket 实现前后端消息互传</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E9%9B%86%E6%88%90%20WebSocket%20%E5%AE%9E%E7%8E%B0%E5%89%8D%E5%90%8E%E7%AB%AF%E6%B6%88%E6%81%AF%E4%BA%92%E4%BC%A0.html</url>
     <content><![CDATA[<h2 id="什么是WebSocket"><a href="#什么是WebSocket" class="headerlink" title="什么是WebSocket?"></a>什么是WebSocket?</h2><p>WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。 </p>
 <p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g819u0lntxj30dw09mmxp.jpg" alt="socket1"></p>
 <a id="more"></a>
@@ -63,7 +63,7 @@
   </entry>
   <entry>
     <title>SpringBoot 集成 redis 实现分布式 session 共享</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E9%9B%86%E6%88%90%20redis%20%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%20session%20%E5%85%B1%E4%BA%AB.html</url>
     <content><![CDATA[<p>session 是服务器用来保存用户操作的一系列会话信息，由 Web 容器进行管理。单机情况下，不存在 session 共享的情况，分布式情况下，如果不进行 session 共享会出现请求落到不同机器要重复登录的情况 。单点登录可以用 cookie+redis 的方式，第一次登陆生成 token，将 token 和用户以键值对的方式存入 redis。并将 token 写入cookie 返回到浏览器。以后每次请求 cookie 都会携带上 token。服务端获取 token 然后去 redis 中查找是否存在此用户从而实现单点登录。</p>
 <a id="more"></a>
 <p>项目代码结构图结构</p>
@@ -99,7 +99,7 @@
   </entry>
   <entry>
     <title>SpringBoot 集成 Redisson 实现分布式锁</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E9%9B%86%E6%88%90%20Redisson%20%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.html</url>
     <content><![CDATA[<p>上篇 《SpringBoot 集成 redis 分布式锁优化》对死锁的问题进行了优化，今天介绍的是 redis 官方推荐使用的 Redisson ，Redisson 架设在 redis 基础上的 Java 驻内存数据网格（In-Memory Data Grid），基于NIO的 Netty 框架上，利用了 redis 键值数据库。功能非常强大，解决了很多分布式架构中的问题。</p>
 <p>Github的wiki地址：<a href="https://github.com/redisson/redisson/wiki" target="_blank" rel="noopener">https://github.com/redisson/redisson/wiki</a> </p>
 <p>官方文档：<a href="https://github.com/redisson/redisson/wiki/%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">https://github.com/redisson/redisson/wiki/%E7%9B%AE%E5%BD%95</a> </p>
@@ -153,7 +153,7 @@
   </entry>
   <entry>
     <title>SpringBoot 集成 redis 分布式锁优化</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E9%9B%86%E6%88%90%20redis%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E4%BC%98%E5%8C%96.html</url>
     <content><![CDATA[<p>继上一篇 《SpringBoot 集成 redis 分布式锁》 写到最后，我们发现这种分布式锁也存在着缺陷，如果A在 setnx 成功后，A成功获取锁了，也就是锁已经存到 Redis 里面了，此时服务器异常关闭或是重启，将不会执行我们的设置过期时间操作，也就不会设置锁的有效期，这样的话锁就不会释放了，就会产生死锁。 </p>
 <a id="more"></a>
 
@@ -179,7 +179,7 @@
   </entry>
   <entry>
     <title>SpringBoot 集成 redis 分布式锁</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E9%9B%86%E6%88%90%20redis%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.html</url>
     <content><![CDATA[<p>继上一篇 《SpringBoot 整合 redis 踩坑日志》之后，又学习了 redis 分布式锁，那为什么需要分布式锁？</p>
 <a id="more"></a>
 
@@ -248,7 +248,7 @@
   </entry>
   <entry>
     <title>SpringBoot 整合 redis 踩坑日志</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E6%95%B4%E5%90%88%20redis%20%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97.html</url>
     <content><![CDATA[<p>SpringBoot 中除了了对常用的关系型数据库提供了优秀的自动化测试以外，对于很多 NoSQL 数据库一样提供了自动化配置的支持，包括：Redis, MongoDB, Elasticsearch, Solr 和 Cassandra。 </p>
 <h2 id="整合redis"><a href="#整合redis" class="headerlink" title="整合redis"></a>整合redis</h2><p>Redis是一个速度非常快的非关系型数据库（non-relational database），它可以存储键（key）与5种不同类型的值（value）之间的映射（mapping），可以将存储在内存的键值对数据持久化到硬盘。可以使用复制特性来扩展读性能，还可以使用客户端分片来扩展写性能。</p>
 <ul>
@@ -317,7 +317,7 @@
   </entry>
   <entry>
     <title>SpringBoot 中使用 RabbitMQ</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20RabbitMQ.html</url>
     <content><![CDATA[<p>今日内容是消息队列。大佬讲了三个消息队列分别是 Pegion、Kafka 和 RabbitMQ。其中 Pegion 是公司自己研发的组件。今天主要在 SpringBoot 中集成 RabbitMQ , 将消息储存在消息队列中并消费的过程。</p>
 <a id="more"></a>
 <h2 id="Message-Broker-与-AMQP-简介"><a href="#Message-Broker-与-AMQP-简介" class="headerlink" title="Message Broker 与 AMQP 简介"></a>Message Broker 与 AMQP 简介</h2><p>Message Broker 是一种消息验证、传输、路由的架构模式，其设计目标主要应用于下面这些场景： </p>
@@ -404,7 +404,7 @@
   </entry>
   <entry>
     <title>SpringBoot 优雅解决 ajax 跨域请求</title>
-    <url>/archives/undefined.html</url>
+    <url>/SpringBoot%20%E4%BC%98%E9%9B%85%E8%A7%A3%E5%86%B3%20ajax%20%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82.html</url>
     <content><![CDATA[<p>今天打开页面报错，地址是有效的，但浏览器会报 “No ‘Access-Control-Allow-Origin’ header is present on the requested resource “ 错误页面如下：</p>
 <p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g71ldngtkcj30qp065t9q.jpg" alt="1568621277875"></p>
 <p>这是由于 ajax 跨域请求造成的</p>
@@ -458,7 +458,7 @@
   </entry>
   <entry>
     <title>Java8 中的 Optional 类的基本使用</title>
-    <url>/archives/undefined.html</url>
+    <url>/Java8%20%E4%B8%AD%E7%9A%84%20Optional%20%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html</url>
     <content><![CDATA[<p>Java8 引入了一个十分有趣的 Optional 类它主要是为了解决臭名昭著的空指针异常（NullPointerException）。当我们对对象的属性进行检查，判断它的值是否为期望的格式，最终却发现我们查看的并不是一个对象，而是一个空指针，它会立即抛出一个让人厌烦的 NullPointerException 异常。    </p>
 <h2 id="抛砖"><a href="#抛砖" class="headerlink" title="抛砖"></a>抛砖</h2><p>我们来看一个简单的实例：</p>
 <a id="more"></a>
@@ -539,7 +539,7 @@
   </entry>
   <entry>
     <title>mybatis参数格式化异常</title>
-    <url>/archives/undefined.html</url>
+    <url>/mybatis%20%E5%8F%82%E6%95%B0%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BC%82%E5%B8%B8.html</url>
     <content><![CDATA[<p>昨天运行程序，程序报了mybatis参数格式化异常:NumberFormatException: For input string:”xx”，错误日志如下：</p>
 <a id="more"></a>
 <h2 id="错误日记"><a href="#错误日记" class="headerlink" title="错误日记"></a>错误日记</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[<span class="number">16</span>/<span class="number">08</span>/<span class="number">16</span> <span class="number">02</span>:<span class="number">15</span>:<span class="number">40</span>:<span class="number">040</span> CST] http-nio-<span class="number">8080</span>-exec-<span class="number">4</span> ERROR filter.ExceptionFilter:  [DUBBO] Got unchecked and undeclared exception which called by <span class="number">127.0</span>.0.1. service: cn.test.web.service.ShareService, method: getShareChannelStInfoList, exception: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: </span><br><span class="line">### Error querying database.  Cause: java.lang.NumberFormatException: For input string: "2016-08-11"</span><br><span class="line">### Cause: java.lang.NumberFormatException: For input string: "2016-08-11", dubbo version: 2.8.4, current host: 127.0.0.1</span><br><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: </span><br><span class="line">### Error querying database.  Cause: java.lang.NumberFormatException: For input string: "2016-08-11"</span><br><span class="line">### Cause: java.lang.NumberFormatException: For input string: "2016-08-11"</span><br><span class="line">    at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:<span class="number">76</span>)</span><br><span class="line">    at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:<span class="number">399</span>)</span><br><span class="line">    at com.sun.proxy.$Proxy32.selectList(Unknown Source)</span><br><span class="line">    at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:<span class="number">205</span>)</span><br><span class="line">    at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:<span class="number">122</span>)</span><br><span class="line">    at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:<span class="number">64</span>)</span><br><span class="line">    at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:<span class="number">53</span>)</span><br><span class="line">    at com.sun.proxy.$Proxy57.getShareChannelStInfo(Unknown Source)</span><br><span class="line">    at cn.test.web.repository.ShareStInfoRepo.getShareChannelList(ShareStInfoRepo.java:<span class="number">37</span>)</span><br><span class="line">    at cn.test.web.impl.ShareServiceImpl.getShareChannelStInfoList(ShareServiceImpl.java:<span class="number">72</span>)</span><br><span class="line">    at com.alibaba.dubbo.common.bytecode.Wrapper19.invokeMethod(Wrapper19.java)</span><br><span class="line">    at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$<span class="number">1</span>.doInvoke(JavassistProxyFactory.java:<span class="number">46</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:<span class="number">72</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:<span class="number">53</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:<span class="number">64</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:<span class="number">75</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:<span class="number">42</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:<span class="number">78</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:<span class="number">70</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:<span class="number">132</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:<span class="number">38</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:<span class="number">38</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$<span class="number">1</span>.invoke(ProtocolFilterWrapper.java:<span class="number">91</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:<span class="number">52</span>)</span><br><span class="line">    at com.alibaba.dubbo.common.bytecode.proxy9.getShareChannelStInfoList(proxy9.java)</span><br><span class="line">    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:<span class="number">62</span>)</span><br><span class="line">    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:<span class="number">43</span>)</span><br><span class="line">    at java.lang.reflect.Method.invoke(Method.java:<span class="number">498</span>)</span><br><span class="line">    at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:<span class="number">137</span>)</span><br><span class="line">    at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:<span class="number">288</span>)</span><br><span class="line">    at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:<span class="number">242</span>)</span><br><span class="line">    at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:<span class="number">229</span>)</span><br><span class="line">    at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:<span class="number">356</span>)</span><br><span class="line">    at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:<span class="number">179</span>)</span><br><span class="line">    at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:<span class="number">220</span>)</span><br><span class="line">    at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:<span class="number">56</span>)</span><br><span class="line">    at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:<span class="number">51</span>)</span><br><span class="line">    at javax.servlet.http.HttpServlet.service(HttpServlet.java:<span class="number">729</span>)</span><br><span class="line">    at com.alibaba.dubbo.rpc.protocol.rest.DubboHttpServer$RestHandler.handle(DubboHttpServer.java:<span class="number">86</span>)</span><br><span class="line">    at com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet.service(DispatcherServlet.java:<span class="number">64</span>)</span><br><span class="line">    at javax.servlet.http.HttpServlet.service(HttpServlet.java:<span class="number">729</span>)</span><br><span class="line">    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:<span class="number">292</span>)</span><br><span class="line">    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:<span class="number">207</span>)</span><br><span class="line">    at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:<span class="number">52</span>)</span><br><span class="line">    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:<span class="number">240</span>)</span><br><span class="line">    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:<span class="number">207</span>)</span><br><span class="line">    at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:<span class="number">123</span>)</span><br><span class="line">    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:<span class="number">240</span>)</span><br><span class="line">    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:<span class="number">207</span>)</span><br><span class="line">    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:<span class="number">212</span>)</span><br><span class="line">    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:<span class="number">106</span>)</span><br><span class="line">    at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:<span class="number">502</span>)</span><br><span class="line">    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:<span class="number">141</span>)</span><br><span class="line">    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:<span class="number">79</span>)</span><br><span class="line">    at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:<span class="number">616</span>)</span><br><span class="line">    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:<span class="number">88</span>)</span><br><span class="line">    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:<span class="number">528</span>)</span><br><span class="line">    at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:<span class="number">1099</span>)</span><br><span class="line">    at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:<span class="number">672</span>)</span><br><span class="line">    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:<span class="number">1520</span>)</span><br><span class="line">    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:<span class="number">1476</span>)</span><br><span class="line">    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:<span class="number">1142</span>)</span><br><span class="line">    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:<span class="number">617</span>)</span><br><span class="line">    at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:<span class="number">61</span>)</span><br><span class="line">    at java.lang.Thread.run(Thread.java:<span class="number">745</span>)</span><br></pre></td></tr></table></figure>
@@ -565,7 +565,7 @@
   </entry>
   <entry>
     <title>请给百度网盘加速100倍</title>
-    <url>/archives/undefined.html</url>
+    <url>/%E8%AF%B7%E7%BB%99%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F100%E5%80%8D.html</url>
     <content><![CDATA[<p>相信小伙伴平时的文件、资源都会保存在百度网盘上，但是有些资源比如视频是不能在线观看的，所以只能下载下来，但是除非我们是百度尊贵的 vip ，否则一定会为百度网盘的龟速下载抓狂，所以这里就要给百度网盘加速100倍，享受飞一般的感觉。</p>
 <a id="more"></a>
 
@@ -600,7 +600,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/archives/undefined.html</url>
+    <url>/hello-world.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
