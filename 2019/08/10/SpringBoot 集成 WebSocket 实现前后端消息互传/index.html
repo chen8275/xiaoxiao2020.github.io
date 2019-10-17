@@ -82,13 +82,13 @@
 
 
 
-<meta name="description" content="什么是WebSocket?WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。   为什么需要WebSocket?大家都知道以前客户端想知道服务端的处理进度，要不停地使用 Ajax 进行轮询，让浏览器隔个几秒就向服务器发一次请求，这对服务器压力较大。另外一种轮询就是采用 long poll 的方">
+<meta name="description" content="什么是WebSocket?WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。">
 <meta name="keywords" content="springboot,websocket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot 集成 WebSocket 实现前后端消息互传">
 <meta property="og:url" content="http://www.huuzii.wiki/2019/08/10/SpringBoot 集成 WebSocket 实现前后端消息互传/index.html">
 <meta property="og:site_name" content="Joyu_chen">
-<meta property="og:description" content="什么是WebSocket?WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。   为什么需要WebSocket?大家都知道以前客户端想知道服务端的处理进度，要不停地使用 Ajax 进行轮询，让浏览器隔个几秒就向服务器发一次请求，这对服务器压力较大。另外一种轮询就是采用 long poll 的方">
+<meta property="og:description" content="什么是WebSocket?WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g819u0lntxj30dw09mmxp.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g81ay92bdgj30hg0e73z1.jpg">
@@ -96,10 +96,10 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g819v72ymuj31e80bemz8.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g819vibc3jj30qe0i2abg.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g819vqz6kfj30qd0hpwfu.jpg">
-<meta property="og:updated_time" content="2019-10-17T09:00:29.869Z">
+<meta property="og:updated_time" content="2019-10-17T09:01:39.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot 集成 WebSocket 实现前后端消息互传">
-<meta name="twitter:description" content="什么是WebSocket?WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。   为什么需要WebSocket?大家都知道以前客户端想知道服务端的处理进度，要不停地使用 Ajax 进行轮询，让浏览器隔个几秒就向服务器发一次请求，这对服务器压力较大。另外一种轮询就是采用 long poll 的方">
+<meta name="twitter:description" content="什么是WebSocket?WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005O54Flgy1g819u0lntxj30dw09mmxp.jpg">
 
 
@@ -377,6 +377,8 @@
       
         <h2 id="什么是WebSocket"><a href="#什么是WebSocket" class="headerlink" title="什么是WebSocket?"></a>什么是WebSocket?</h2><p>WebSocket 协议是基于 TCP 的一种新的网络协议。它实现了浏览器与服务器全双工 (full-duplex) 通信—允许服务器主动发送信息给客户端。 </p>
 <p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g819u0lntxj30dw09mmxp.jpg" alt="socket1"></p>
+<a id="more"></a>
+
 <h2 id="为什么需要WebSocket"><a href="#为什么需要WebSocket" class="headerlink" title="为什么需要WebSocket?"></a>为什么需要WebSocket?</h2><p>大家都知道以前客户端想知道服务端的处理进度，要不停地使用 Ajax 进行轮询，让浏览器隔个几秒就向服务器发一次请求，这对服务器压力较大。另外一种轮询就是采用 long poll 的方式，这就跟打电话差不多，没收到消息就一直不挂电话，也就是说，客户端发起连接后，如果没消息，就一直不返回 response 给客户端，连接阶段一直是阻塞的。</p>
 <p>而 WebSocket 解决了 HTTP 的这几个难题。当服务器完成协议升级后（ HTTP -&gt; WebSocket ），服务端可以主动推送信息给客户端，解决了轮询造成的同步延迟问题。由于 WebSocket 只需要一次 HTTP 握手，服务端就能一直与客户端保持通信，直到关闭连接，这样就解决了服务器需要反复解析 HTTP 协议，减少了资源的开销。</p>
 <p><img src="http://ww1.sinaimg.cn/large/005O54Flgy1g81ay92bdgj30hg0e73z1.jpg" alt="websockets"> </p>
