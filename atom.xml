@@ -18,8 +18,8 @@
   
   <entry>
     <title>SpringBoot 集成 WebSocket 实现前后端消息互传</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E9%9B%86%E6%88%90%20WebSocket%20%E5%AE%9E%E7%8E%B0%E5%89%8D%E5%90%8E%E7%AB%AF%E6%B6%88%E6%81%AF%E4%BA%92%E4%BC%A0.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 集成 WebSocket 实现前后端消息互传.html</id>
+    <link href="http://www.huuzii.wiki/archives/1ec52e61.html"/>
+    <id>http://www.huuzii.wiki/archives/1ec52e61.html</id>
     <published>2019-08-10T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.217Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>SpringBoot 集成 redis 实现分布式 session 共享</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E9%9B%86%E6%88%90%20redis%20%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%20session%20%E5%85%B1%E4%BA%AB.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 集成 redis 实现分布式 session 共享.html</id>
+    <link href="http://www.huuzii.wiki/archives/5589af0.html"/>
+    <id>http://www.huuzii.wiki/archives/5589af0.html</id>
     <published>2019-07-25T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.219Z</updated>
     
@@ -69,8 +69,8 @@
   
   <entry>
     <title>SpringBoot 集成 Redisson 实现分布式锁</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E9%9B%86%E6%88%90%20Redisson%20%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 集成 Redisson 实现分布式锁.html</id>
+    <link href="http://www.huuzii.wiki/archives/b653c1e7.html"/>
+    <id>http://www.huuzii.wiki/archives/b653c1e7.html</id>
     <published>2019-07-15T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.216Z</updated>
     
@@ -96,8 +96,8 @@
   
   <entry>
     <title>SpringBoot 集成 redis 分布式锁优化</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E9%9B%86%E6%88%90%20redis%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E4%BC%98%E5%8C%96.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 集成 redis 分布式锁优化.html</id>
+    <link href="http://www.huuzii.wiki/archives/3672fc28.html"/>
+    <id>http://www.huuzii.wiki/archives/3672fc28.html</id>
     <published>2019-07-10T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.217Z</updated>
     
@@ -121,8 +121,8 @@
   
   <entry>
     <title>SpringBoot 集成 redis 分布式锁</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E9%9B%86%E6%88%90%20redis%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 集成 redis 分布式锁.html</id>
+    <link href="http://www.huuzii.wiki/archives/2902b1c9.html"/>
+    <id>http://www.huuzii.wiki/archives/2902b1c9.html</id>
     <published>2019-07-06T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.214Z</updated>
     
@@ -146,8 +146,8 @@
   
   <entry>
     <title>SpringBoot 整合 redis 踩坑日志</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E6%95%B4%E5%90%88%20redis%20%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 整合 redis 踩坑日志.html</id>
+    <link href="http://www.huuzii.wiki/archives/50eb438f.html"/>
+    <id>http://www.huuzii.wiki/archives/50eb438f.html</id>
     <published>2019-07-01T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.215Z</updated>
     
@@ -175,8 +175,8 @@
   
   <entry>
     <title>SpringBoot 中使用 RabbitMQ</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20RabbitMQ.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 中使用 RabbitMQ.html</id>
+    <link href="http://www.huuzii.wiki/archives/602dea59.html"/>
+    <id>http://www.huuzii.wiki/archives/602dea59.html</id>
     <published>2019-04-20T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.215Z</updated>
     
@@ -200,8 +200,8 @@
   
   <entry>
     <title>SpringBoot 优雅解决 ajax 跨域请求</title>
-    <link href="http://www.huuzii.wiki/SpringBoot%20%E4%BC%98%E9%9B%85%E8%A7%A3%E5%86%B3%20ajax%20%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82.html"/>
-    <id>http://www.huuzii.wiki/SpringBoot 优雅解决 ajax 跨域请求.html</id>
+    <link href="http://www.huuzii.wiki/archives/8c5dcb23.html"/>
+    <id>http://www.huuzii.wiki/archives/8c5dcb23.html</id>
     <published>2019-04-10T02:10:10.000Z</published>
     <updated>2019-10-17T15:16:43.213Z</updated>
     
@@ -227,8 +227,8 @@
   
   <entry>
     <title>Java8 中的 Optional 类的基本使用</title>
-    <link href="http://www.huuzii.wiki/Java8%20%E4%B8%AD%E7%9A%84%20Optional%20%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html"/>
-    <id>http://www.huuzii.wiki/Java8 中的 Optional 类的基本使用.html</id>
+    <link href="http://www.huuzii.wiki/archives/6b3f5036.html"/>
+    <id>http://www.huuzii.wiki/archives/6b3f5036.html</id>
     <published>2019-03-28T02:10:10.000Z</published>
     <updated>2019-10-17T15:16:43.212Z</updated>
     
@@ -251,8 +251,8 @@
   
   <entry>
     <title>mybatis参数格式化异常</title>
-    <link href="http://www.huuzii.wiki/mybatis%20%E5%8F%82%E6%95%B0%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%BC%82%E5%B8%B8.html"/>
-    <id>http://www.huuzii.wiki/mybatis 参数格式化异常.html</id>
+    <link href="http://www.huuzii.wiki/archives/7e7c6151.html"/>
+    <id>http://www.huuzii.wiki/archives/7e7c6151.html</id>
     <published>2019-03-20T03:23:26.000Z</published>
     <updated>2019-10-17T15:16:43.219Z</updated>
     
@@ -274,8 +274,8 @@
   
   <entry>
     <title>请给百度网盘加速100倍</title>
-    <link href="http://www.huuzii.wiki/%E8%AF%B7%E7%BB%99%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F100%E5%80%8D.html"/>
-    <id>http://www.huuzii.wiki/请给百度网盘加速100倍.html</id>
+    <link href="http://www.huuzii.wiki/archives/c623ee06.html"/>
+    <id>http://www.huuzii.wiki/archives/c623ee06.html</id>
     <published>2019-03-12T02:10:10.000Z</published>
     <updated>2019-10-17T15:16:43.220Z</updated>
     
@@ -297,8 +297,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.huuzii.wiki/hello-world.html"/>
-    <id>http://www.huuzii.wiki/hello-world.html</id>
+    <link href="http://www.huuzii.wiki/archives/4a17b156.html"/>
+    <id>http://www.huuzii.wiki/archives/4a17b156.html</id>
     <published>2019-02-10T02:10:10.000Z</published>
     <updated>2019-10-17T15:16:43.218Z</updated>
     
