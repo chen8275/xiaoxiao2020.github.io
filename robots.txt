@@ -11,5 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://xiaoxiao2020.github.io/sitemap.xml
-Sitemap: https://xiaoxiao2020.github.io/baidusitemap.xml
+Sitemap: http://huuzii.wiki/sitemap.xml
+Sitemap: http://huuzii.wiki/baidusitemap.xml
